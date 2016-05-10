@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.IO;
+using ForceLib;
 
 using NLua;
 
@@ -23,6 +24,7 @@ end
 
      public GameObject sphere;
      public Transform casting_point;
+     public GameObject spawnedObj;
 
      void Start()
      {
@@ -30,10 +32,10 @@ end
           TextAsset textFile = Resources.Load("Test") as TextAsset;
       
           line = textFile.text;
-
+          
           // source = @line;
 
-          GameManager.instance.player.spellbook.TryGetValue("CastSpell", out source);
+          source = GameManager.instance.player.RAM_code;
 
           env = new Lua();
           env.LoadCLRPackage();
@@ -41,6 +43,9 @@ end
           env["this"] = this;
           env["transform"] = casting_point;
           env["sphere"] = sphere; // Give the script access to the prefab.
+         // env["obj"] = spawnedObj;
+         // env["rb"] = this.gameObject.GetComponent<Rigidbody>();
+        //  env["forward"] = new Vector3(0,0,1);
 
           //System.Object[] result = new System.Object[0];
           try
