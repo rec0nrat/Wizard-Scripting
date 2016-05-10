@@ -93,7 +93,8 @@ function CastSpell()
      if Input.GetKeyDown(KeyCode.C) then
 
           obj = GameObject.Instantiate(sphere, transform.position, Quaternion.identity)
-          obj:GetComponent('Rigidbody'):AddRelativeForce(Vector3.forward * 50)
+          ForceLib.AddRelative(obj)
+          --obj:GetComponent('Rigidbody'):AddRelativeForce(Vector3.forward * 50)
 
      end
 end

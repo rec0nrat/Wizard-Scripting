@@ -64,6 +64,8 @@ end
 
      void Update()
      {
+
+         // ForceLib.ForceLib.AddRelative(this.gameObject);
           Call("CastSpell");
           Call("Update");
      }
