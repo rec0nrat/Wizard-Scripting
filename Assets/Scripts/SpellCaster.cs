@@ -24,7 +24,7 @@ end
      public GameObject sphere;
      public Transform casting_point;
 
-     void Awake()
+     void Start()
      {
           string line;
           TextAsset textFile = Resources.Load("Test") as TextAsset;
@@ -32,8 +32,8 @@ end
           line = textFile.text;
 
           // source = @line;
-          // source = @GameManager.instance.player.cached_spell["CastSpell"].ToString(); 
-          
+
+          GameManager.instance.player.spellbook.TryGetValue("CastSpell", out source);
 
           env = new Lua();
           env.LoadCLRPackage();
@@ -55,11 +55,7 @@ end
 
      }
 
-     void Start()
-     {
-          
-          Call("Start");
-     }
+   
 
      void Update()
      {
