@@ -28,15 +28,12 @@ end
      {
           string line;
           TextAsset textFile = Resources.Load("Test") as TextAsset;
-          //string fileName = ;
-          // StreamReader theReader = new StreamReader(textFile.name);
+      
           line = textFile.text;
-          // using (theReader)
-          // {
-          // line = theReader.ReadToEnd();
-          source = @line;
 
-          // }
+          // source = @line;
+          // source = @GameManager.instance.player.cached_spell["CastSpell"].ToString(); 
+          
 
           env = new Lua();
           env.LoadCLRPackage();
@@ -60,6 +57,7 @@ end
 
      void Start()
      {
+          
           Call("Start");
      }
 
