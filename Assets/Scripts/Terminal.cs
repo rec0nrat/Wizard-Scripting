@@ -13,6 +13,12 @@ public class Terminal : MonoBehaviour {
      public Text RAM_txt;
      public List<Text> spellslot_txt;
      public Text health_txt;
+     public Text spell_current;
+
+     void Start()
+     {
+          UpdateSpellButtons();
+     }
 
      public void UpdateSpellButtons()
      {
@@ -31,11 +37,6 @@ public class Terminal : MonoBehaviour {
           }
      }
 
-     public void SpellButtonClicked()
-     {
-          Debug.Log(gameObject.GetComponent<Text>().text);
-     }
-
 	public void Compile()
      {
          // Debug.Log("compiling code");
@@ -49,8 +50,8 @@ public class Terminal : MonoBehaviour {
                {
                     isDuplicate = true;
                     GameManager.instance.player.spellbook[i] = stemp;
-                    GameManager.instance.player.RAM_code = stemp.code;
-                    GameManager.instance.player.RAM_function = stemp.name;
+                   // GameManager.instance.player.RAM_code = stemp.code;
+                    //GameManager.instance.player.RAM_function = stemp.name;
                     break;
                }
           }
@@ -58,8 +59,8 @@ public class Terminal : MonoBehaviour {
           if (!isDuplicate)
           {
                GameManager.instance.player.spellbook.Add(stemp);
-               GameManager.instance.player.RAM_function = stemp.name;
-               GameManager.instance.player.RAM_code = stemp.code;
+              // GameManager.instance.player.RAM_function = stemp.name;
+              // GameManager.instance.player.RAM_code = stemp.code;
               // GameManager.instance.player.spellnames_current.Add(name_input.text);
               // Debug.Log("Dictionary new::cout = " + GameManager.instance.player.spellbook.Count);
           }
@@ -81,6 +82,20 @@ public class Terminal : MonoBehaviour {
                Debug.Log("Dictionary new::cout = " + GameManager.instance.player.spellbook.Count);
           }
           */
+     }
+
+     public void SpellTextUpdate(int Index)
+     {
+          if(GameManager.instance.player.spellbook.Count > 0)
+          {
+               if (Index < GameManager.instance.player.spellbook.Count)
+               {
+                    name_input.text = GameManager.instance.player.spellbook[Index].name;
+                    code_input.text = GameManager.instance.player.spellbook[Index].code;
+                    GameManager.instance.player.RAM_code = GameManager.instance.player.spellbook[Index].code;
+                    GameManager.instance.player.RAM_function = GameManager.instance.player.spellbook[Index].name;
+               }
+          }
      }
 
      void Update()
