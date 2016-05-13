@@ -14,7 +14,9 @@ public class SpellCaster : MonoBehaviour {
 
      public GameObject sphere;
      public Transform casting_point;
+     public Transform righthand_slot;
      public GameObject spawnedObj;
+     public GameObject sword;
 
      void Start()
      {
@@ -34,8 +36,11 @@ public class SpellCaster : MonoBehaviour {
           env.LoadCLRPackage();
 
           env["this"] = this;
-          env["transform"] = casting_point;
+          env["casting_point"] = casting_point;
+          env["righthand_slot"] = righthand_slot;
           env["sphere"] = sphere; // Give the script access to the prefab.
+          env["sword"] = sword;
+
          // env["obj"] = spawnedObj;
          // env["rb"] = this.gameObject.GetComponent<Rigidbody>();
         //  env["forward"] = new Vector3(0,0,1);
