@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class Terminal : MonoBehaviour {
 
      public Text spell_name;
      public Text spell_code;
-     public Canvas terminal_can;
+     public GameObject terminal_obj;
+     public Text RAM_txt;
+     public List<Text> spellslot_txt;
+     public Text health_txt;
 
 
 	public void Compile()
@@ -26,14 +30,14 @@ public class Terminal : MonoBehaviour {
 
           if (Input.GetKeyDown(KeyCode.T))
           {
-               if (terminal_can.enabled)
+               if (terminal_obj.activeInHierarchy)
                {
-                    terminal_can.enabled = false;
+                    terminal_obj.SetActive(false);
                }
                else
                {
                     Debug.Log("Open Terminal");
-                    terminal_can.enabled = true;
+                    terminal_obj.SetActive(true);
 
                }
           }

@@ -232,7 +232,7 @@ GameObject:
   - 114: {fileID: 238051241}
   - 114: {fileID: 238051245}
   m_Layer: 5
-  m_Name: TerminalCanvas
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,7 +328,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spell_name: {fileID: 511360250}
   spell_code: {fileID: 430966495}
-  terminal_can: {fileID: 238051243}
+  terminal_obj: {fileID: 457604545}
+  RAM_txt: {fileID: 2123161975}
+  spellslot_txt:
+  - {fileID: 1060344540}
+  - {fileID: 2031599233}
+  - {fileID: 2123458348}
+  health_txt: {fileID: 1185674707}
 --- !u!1 &275510077
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,7 +603,7 @@ GameObject:
   - 114: {fileID: 457604548}
   - 114: {fileID: 457604547}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: Terminal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
