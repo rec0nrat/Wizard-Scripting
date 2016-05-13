@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: f645b8d3f5700994fbf57d63f8a8eb7f
+timeCreated: 1463130548
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Character1_RightArm
+    100004: Character1_RightArm1
+    100006: Character1_RightForeArm
+    100008: Character1_RightForeArm1
+    100010: Character1_RightHand
+    100012: Character1_RightHand1
+    100014: Character1_RightHandIndex1
+    100016: Character1_RightHandIndex2
+    100018: Character1_RightHandIndex3
+    100020: Character1_RightHandIndex4
+    100022: Character1_RightHandIndex5
+    100024: Character1_RightHandIndex6
+    100026: Character1_RightHandIndex7
+    100028: Character1_RightHandIndex8
+    100030: Character1_RightHandMiddle1
+    100032: Character1_RightHandMiddle2
+    100034: Character1_RightHandMiddle3
+    100036: Character1_RightHandMiddle4
+    100038: Character1_RightHandMiddle5
+    100040: Character1_RightHandMiddle6
+    100042: Character1_RightHandMiddle7
+    100044: Character1_RightHandMiddle8
+    100046: Character1_RightHandPinky1
+    100048: Character1_RightHandPinky2
+    100050: Character1_RightHandPinky3
+    100052: Character1_RightHandPinky4
+    100054: Character1_RightHandPinky5
+    100056: Character1_RightHandPinky6
+    100058: Character1_RightHandPinky7
+    100060: Character1_RightHandPinky8
+    100062: Character1_RightHandRing1
+    100064: Character1_RightHandRing2
+    100066: Character1_RightHandRing3
+    100068: Character1_RightHandRing4
+    100070: Character1_RightHandRing5
+    100072: Character1_RightHandRing6
+    100074: Character1_RightHandRing7
+    100076: Character1_RightHandRing8
+    100078: Character1_RightHandThumb1
+    100080: Character1_RightHandThumb2
+    100082: Character1_RightHandThumb3
+    100084: Character1_RightHandThumb4
+    100086: Character1_RightHandThumb5
+    100088: Character1_RightHandThumb6
+    100090: Character1_RightHandThumb7
+    100092: Character1_RightHandThumb8
+    100094: Character1_RightShoulder
+    100096: Character1_RightShoulder1
+    100098: Character1_Spine4
+    400000: //RootNode
+    400002: Character1_RightArm
+    400004: Character1_RightArm1
+    400006: Character1_RightForeArm
+    400008: Character1_RightForeArm1
+    400010: Character1_RightHand
+    400012: Character1_RightHand1
+    400014: Character1_RightHandIndex1
+    400016: Character1_RightHandIndex2
+    400018: Character1_RightHandIndex3
+    400020: Character1_RightHandIndex4
+    400022: Character1_RightHandIndex5
+    400024: Character1_RightHandIndex6
+    400026: Character1_RightHandIndex7
+    400028: Character1_RightHandIndex8
+    400030: Character1_RightHandMiddle1
+    400032: Character1_RightHandMiddle2
+    400034: Character1_RightHandMiddle3
+    400036: Character1_RightHandMiddle4
+    400038: Character1_RightHandMiddle5
+    400040: Character1_RightHandMiddle6
+    400042: Character1_RightHandMiddle7
+    400044: Character1_RightHandMiddle8
+    400046: Character1_RightHandPinky1
+    400048: Character1_RightHandPinky2
+    400050: Character1_RightHandPinky3
+    400052: Character1_RightHandPinky4
+    400054: Character1_RightHandPinky5
+    400056: Character1_RightHandPinky6
+    400058: Character1_RightHandPinky7
+    400060: Character1_RightHandPinky8
+    400062: Character1_RightHandRing1
+    400064: Character1_RightHandRing2
+    400066: Character1_RightHandRing3
+    400068: Character1_RightHandRing4
+    400070: Character1_RightHandRing5
+    400072: Character1_RightHandRing6
+    400074: Character1_RightHandRing7
+    400076: Character1_RightHandRing8
+    400078: Character1_RightHandThumb1
+    400080: Character1_RightHandThumb2
+    400082: Character1_RightHandThumb3
+    400084: Character1_RightHandThumb4
+    400086: Character1_RightHandThumb5
+    400088: Character1_RightHandThumb6
+    400090: Character1_RightHandThumb7
+    400092: Character1_RightHandThumb8
+    400094: Character1_RightShoulder
+    400096: Character1_RightShoulder1
+    400098: Character1_Spine4
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
