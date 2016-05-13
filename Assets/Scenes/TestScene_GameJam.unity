@@ -290,7 +290,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -325,8 +324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a146084d1b83642990b8cfc1065c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spell_name: {fileID: 511360250}
-  spell_code: {fileID: 430966495}
+  name_input: {fileID: 552936676}
+  code_input: {fileID: 457604547}
   terminal_obj: {fileID: 457604545}
   RAM_txt: {fileID: 2123161975}
   spellslot_txt:
@@ -618,7 +617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &457604546
 RectTransform:
   m_ObjectHideFlags: 0
@@ -637,8 +636,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -216.27, y: 1.2}
-  m_SizeDelta: {x: 460, y: 418}
+  m_AnchoredPosition: {x: -151, y: 1.2}
+  m_SizeDelta: {x: 590, y: 418}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &457604547
 MonoBehaviour:
@@ -682,7 +681,7 @@ MonoBehaviour:
   m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
-  m_LineType: 0
+  m_LineType: 2
   m_HideMobileInput: 0
   m_CharacterValidation: 0
   m_CharacterLimit: 0
@@ -891,7 +890,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 100
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
