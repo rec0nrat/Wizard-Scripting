@@ -146,6 +146,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             else
             {
                 m_MouseLook.SetCursorLock(false);
+                float speed = 0;
+                Vector3 desiredMove = transform.forward * m_Input.y + transform.right * m_Input.x;
+                RaycastHit hitInfo;
+                Physics.SphereCast(transform.position, m_CharacterController.radius, Vector3.down, out hitInfo,
+                                   m_CharacterController.height / 2f, ~0, QueryTriggerInteraction.Ignore);
+                desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
+                m_MoveDir.x = desiredMove.x * speed;
+                m_MoveDir.z = desiredMove.z * speed;
                 m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.fixedDeltaTime;
                 m_CollisionFlags = m_CharacterController.Move(m_MoveDir * Time.fixedDeltaTime);
             }
