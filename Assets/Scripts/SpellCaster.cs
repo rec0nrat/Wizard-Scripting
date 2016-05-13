@@ -8,6 +8,7 @@ using NLua;
 public class SpellCaster : MonoBehaviour {
 
      public string source;
+     public GameObject terminal;
 
      Lua env;
 
@@ -57,8 +58,21 @@ public class SpellCaster : MonoBehaviour {
      void Update()
      {
 
-         // ForceLib.ForceLib.AddRelative(this.gameObject);
-          Call("Fireball");
+          // ForceLib.ForceLib.AddRelative(this.gameObject);
+          if (!terminal.activeInHierarchy)
+          {
+               source = GameManager.instance.player.RAM_code;
+               try
+               {
+                    //result = env.DoString(source);
+                    env.DoString(source);
+               }
+               catch (NLua.Exceptions.LuaException e)
+               {
+                    Debug.LogError(FormatException(e), gameObject);
+               }
+               Call(GameManager.instance.player.RAM_function);
+          }
           Call("Update");
      }
 
