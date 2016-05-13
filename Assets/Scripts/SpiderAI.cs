@@ -52,17 +52,19 @@ public class SpiderAI : MonoBehaviour
 
             case spider_state.CHASE:
             {
+                //print("Chasing");
                 NavMeshPath path = new NavMeshPath();
                 if (navAgent.CalculatePath(playerP.position, path))
                 {
+                    //print("CalculatePath worked");
                     if (navAgent.SetPath(path))
                     {
-                        
+                        //print("SetPath worked");
                     }
                 }
                 
                 //RaycastHit hit;
-                if (Physics.Raycast(t.position, transform.forward, 3, playerMask))
+                if (Physics.Raycast(t.position, transform.forward, 5, playerMask))
                 {
                     SetState(spider_state.ATTACK);
                     navAgent.Stop(); 
@@ -73,9 +75,13 @@ public class SpiderAI : MonoBehaviour
             case spider_state.ATTACK:
             {
                 Attack();
-                if (!Physics.Raycast(t.position, transform.forward, 3, playerMask))
+                
+                if (!Physics.Raycast(t.position, transform.forward, 5, playerMask))
                 {
                     SetState(spider_state.CHASE);
+                    print("Switch To Chase");
+                    navAgent.ResetPath();
+                    navAgent.Resume(); 
                 }
 
             }break; 
@@ -85,7 +91,7 @@ public class SpiderAI : MonoBehaviour
     void Attack()
     {
         ++attackTimer;
-
+        print("damaging");
         if (attackTimer >= rateOfAttack)
         {
             attackTimer = 0;
