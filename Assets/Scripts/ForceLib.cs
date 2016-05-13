@@ -14,7 +14,7 @@ namespace ForceLib
                
                // Debug.Log("Relative force function reached");
                Rigidbody rb = obj.GetComponent<Rigidbody>();
-               rb.AddRelativeForce(Vector3.forward * 50);
+               rb.AddRelativeForce(Vector3.forward * 800f);
           }
 
 
