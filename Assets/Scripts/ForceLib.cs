@@ -17,6 +17,10 @@ namespace ForceLib
                rb.AddRelativeForce(Vector3.forward * 800f);
           }
 
+          public static void AttachObject(GameObject obj, GameObject objParent)
+          {
+               obj.transform.parent = objParent.transform;
+          }
 
 
      }
