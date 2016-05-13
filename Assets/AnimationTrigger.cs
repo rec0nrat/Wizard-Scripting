@@ -9,7 +9,7 @@ public class AnimationTrigger : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            clip.Play("CloseDoor");
+            clip.Play("DoorClose");
         }
     }
 }
