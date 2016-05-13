@@ -7,21 +7,19 @@ public class GauntletUIManager : MonoBehaviour
 {
     public Text activeSpellText; 
     public List<Text> spells;
-	// Use this for initialization
-	void Start () 
-    {
-        //spells = new List<Text>(); 
-	}
-	
-	// Update is called once per frame
-	void Update () 
-    {
-	
-	}
 
     void UpdateRAMUI(string[] spellNames)
     {
-        
+        int count = 0;
+       
+        for (int index = 0;
+            index < spells.Count;
+            ++index, ++count)
+        {
+            spells[index].text = spellNames[index];
+        }
+
+        // TODO(barret): figure out how to add a new spell
     }
 
     public void SpellButtonPressed(int Index)
