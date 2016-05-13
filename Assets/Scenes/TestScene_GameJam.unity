@@ -145,7 +145,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &229535816
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +334,7 @@ MonoBehaviour:
   - {fileID: 2031599233}
   - {fileID: 2123458348}
   health_txt: {fileID: 1185674707}
+  spell_current: {fileID: 0}
 --- !u!1 &275510077
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +987,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e6912824dbc004ca9dd1c2c8c9b4d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  damage: 5
+  rateOfAttack: 60
 --- !u!23 &625978158
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1114,6 +1118,14 @@ Prefab:
     - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
@@ -1294,7 +1306,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 851703625}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CastingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}

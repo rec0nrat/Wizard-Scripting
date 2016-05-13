@@ -2,9 +2,16 @@
 using System.Collections;
 
 public class SpiderAI : MonoBehaviour 
-{
-    int health; 
+{   
     NavMeshAgent navAgent;
+    Transform t;
+
+    public int maxHealth = 100; 
+    int health;
+    public int damage = 5;
+
+    public int rateOfAttack = 60; 
+    int attackTimer = 0;
 
     enum spider_state
     {
@@ -14,14 +21,18 @@ public class SpiderAI : MonoBehaviour
     }
 
     spider_state _spiderState;
-    Vector3 playerP;
+    Transform playerP;
+    int playerMask = (1 << 8);
 
 	// Use this for initialization
 	void Start () 
     {
 	    navAgent = GetComponent<NavMeshAgent>();
+        t = GetComponent<Transform>();
         _spiderState = spider_state.IDOL;
-        playerP = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
+        playerP = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
+        health = maxHealth; 
 	}
 	
 	// Update is called once per frame
@@ -42,19 +53,41 @@ public class SpiderAI : MonoBehaviour
             case spider_state.CHASE:
             {
                 NavMeshPath path = new NavMeshPath();
-                if (navAgent.CalculatePath(playerP, path))
+                if (navAgent.CalculatePath(playerP.position, path))
                 {
                     if (navAgent.SetPath(path))
                     {
                         
                     }
                 }
+                
+                //RaycastHit hit;
+                if (Physics.Raycast(t.position, transform.forward, 3, playerMask))
+                {
+                    SetState(spider_state.ATTACK);
+                    navAgent.Stop(); 
+                    //print("SphereCast went off");
+                }
             }break;
 
             case spider_state.ATTACK:
             {
- 
+                Attack();
+                if (!Physics.Raycast(t.position, transform.forward, 3, playerMask))
+                {
+                    SetState(spider_state.CHASE);
+                }
             }break; 
+        }
+    }
+
+    void Attack()
+    {
+        ++attackTimer;
+
+        if (attackTimer >= rateOfAttack)
+        {
+ 
         }
     }
 
@@ -68,6 +101,17 @@ public class SpiderAI : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             SetState(spider_state.CHASE);
+        }
+    }
+
+    public void ApplyDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            // TODO(barret): what happens after the spider dies
+            print("Spider Died");
+            Destroy(this);
         }
     }
 }
