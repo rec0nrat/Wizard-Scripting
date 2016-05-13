@@ -4779,7 +4779,7 @@ MonoBehaviour:
     Input.GetKey(KeyCode.N) then\r\n\t\tGameObject.Instantiate(sphere, transform.position,
     Quaternion.identity)\r\n\tend\r\nend\r\n\r\n"
   terminal: {fileID: 457604545}
-  sphere: {fileID: 100000, guid: bfa161fc153e32046a29630e75799ad7, type: 2}
+  sphere: {fileID: 101554, guid: e4b5abf428b7c74498f4cd66aba4c2e8, type: 2}
   casting_point: {fileID: 851703625}
   righthand_slot: {fileID: 438717526}
   spawnedObj: {fileID: 0}
@@ -12142,7 +12142,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 48364a6b89f98fc4c994499c9f08c6e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.86
+      value: -1.03
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 48364a6b89f98fc4c994499c9f08c6e0, type: 3}
       propertyPath: m_LocalPosition.z
