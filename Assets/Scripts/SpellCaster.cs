@@ -19,6 +19,8 @@ public class SpellCaster : MonoBehaviour {
      {
           
           string line;
+
+          //Testing to see if I can load from a file in the resources folder
           TextAsset textFile = Resources.Load("Test") as TextAsset;
       
           line = textFile.text;
@@ -56,7 +58,7 @@ public class SpellCaster : MonoBehaviour {
      {
 
          // ForceLib.ForceLib.AddRelative(this.gameObject);
-          Call("CastSpell");
+          Call("Fireball");
           Call("Update");
      }
 

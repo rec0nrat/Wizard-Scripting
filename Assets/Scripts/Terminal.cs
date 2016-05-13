@@ -15,6 +15,7 @@ public class Terminal : MonoBehaviour {
 
 	public void Compile()
      {
+
           GameManager.instance.player.spellbook.Add(spell_name.text, spell_code.text);
           GameManager.instance.player.RAM_function = spell_name.text;
           GameManager.instance.player.spellbook.TryGetValue(spell_name.text, out GameManager.instance.player.RAM_function);
