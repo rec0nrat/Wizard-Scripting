@@ -9,5 +9,10 @@ public class HealthUIManager : MonoBehaviour
     public void UpdateHealth(float amount)
     {
         healthText.text = "Health:  " + amount;
+
+        if (amount <= 0)
+        {
+            healthText.text = "Dead Player";
+        }
     }
 }
