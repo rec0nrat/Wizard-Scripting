@@ -15,8 +15,10 @@ public class SpellCaster : MonoBehaviour {
      public GameObject sphere;
      public Transform casting_point;
      public Transform righthand_slot;
+     public GameObject weapon_obj;
      public GameObject spawnedObj;
      public GameObject sword;
+     public Animator hand_anim;
 
      void Start()
      {
@@ -40,6 +42,8 @@ public class SpellCaster : MonoBehaviour {
           env["righthand_slot"] = righthand_slot;
           env["sphere"] = sphere; // Give the script access to the prefab.
           env["sword"] = sword;
+          env["hand_anim"] = hand_anim;
+          env["weapon_obj"] = weapon_obj;
 
          // env["obj"] = spawnedObj;
          // env["rb"] = this.gameObject.GetComponent<Rigidbody>();
@@ -77,6 +81,11 @@ public class SpellCaster : MonoBehaviour {
                     Debug.LogError(FormatException(e), gameObject);
                }
                Call(GameManager.instance.player.RAM_function);
+          }
+
+          if (Input.GetMouseButtonDown(1))
+          {
+               hand_anim.SetTrigger("slash");
           }
           Call("Update");
      }

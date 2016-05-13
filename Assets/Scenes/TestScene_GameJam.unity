@@ -2713,6 +2713,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98414ce738e74e845b8367dceca1130f, type: 3}
   m_IsPrefabParent: 0
+--- !u!95 &407616050 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 9500000, guid: 9a479b1271db2d945a03f347b71a49aa,
+    type: 3}
+  m_PrefabInternal: {fileID: 898523974}
 --- !u!1 &408123198 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: a968d707e7dc6dc4aaec897d56a80157, type: 3}
@@ -4787,8 +4792,10 @@ MonoBehaviour:
   sphere: {fileID: 101554, guid: e4b5abf428b7c74498f4cd66aba4c2e8, type: 2}
   casting_point: {fileID: 851703625}
   righthand_slot: {fileID: 438717526}
+  weapon_obj: {fileID: 0}
   spawnedObj: {fileID: 0}
   sword: {fileID: 122224, guid: 16676ba8eada28b4ba23f77b695f2475, type: 2}
+  hand_anim: {fileID: 407616050}
 --- !u!1001 &733016143
 Prefab:
   m_ObjectHideFlags: 0

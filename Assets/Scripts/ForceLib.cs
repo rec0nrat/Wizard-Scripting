@@ -6,9 +6,6 @@ namespace ForceLib
      public static class ForceLib
      {
 
-
-
-
           public static void AddRelative(GameObject obj)
           {
                
@@ -22,6 +19,10 @@ namespace ForceLib
                obj.transform.parent = objParent.transform;
           }
 
+          public static void Slash(Animator anim)
+          {
+               anim.SetTrigger("slash");
+          }
 
      }
 }
