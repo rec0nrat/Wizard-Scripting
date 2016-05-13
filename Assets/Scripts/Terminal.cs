@@ -84,6 +84,20 @@ public class Terminal : MonoBehaviour {
           */
      }
 
+     public void SpellTextUpdate(int Index)
+     {
+          if(GameManager.instance.player.spellbook.Count > 0)
+          {
+               if (Index < GameManager.instance.player.spellbook.Count)
+               {
+                    name_input.text = GameManager.instance.player.spellbook[Index].name;
+                    code_input.text = GameManager.instance.player.spellbook[Index].code;
+                    GameManager.instance.player.RAM_code = GameManager.instance.player.spellbook[Index].code;
+                    GameManager.instance.player.RAM_function = GameManager.instance.player.spellbook[Index].name;
+               }
+          }
+     }
+
      void Update()
      {
           if (Input.GetKeyDown(KeyCode.LeftControl))
