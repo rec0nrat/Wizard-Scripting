@@ -7,7 +7,8 @@ public class Sword : MonoBehaviour {
      {
           if(other.gameObject.tag == "enemy")
           {
-               Destroy(other.gameObject);
+               // Destroy(other.gameObject);
+               Debug.Log("bash the spider with my sword!");
           }
 
      }
