@@ -36,7 +36,7 @@ public class Terminal : MonoBehaviour {
                }
                else
                {
-                    Debug.Log("Open Terminal");
+                   // Debug.Log("Open Terminal");
                     terminal_obj.SetActive(true);
 
                }

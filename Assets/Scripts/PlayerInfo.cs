@@ -90,9 +90,9 @@ import 'ForceLib'
 
 function CastSpell()
      local obj
-     if Input.GetKeyDown(KeyCode.C) then
+     if Input.GetMouseButtonDown(0) then
 
-          obj = GameObject.Instantiate(sphere, transform.position, Quaternion.identity)
+          obj = GameObject.Instantiate(sphere, transform.position, this.transform.rotation)
           ForceLib.AddRelative(obj)
           --obj:GetComponent('Rigidbody'):AddRelativeForce(Vector3.forward * 50)
 
@@ -100,7 +100,7 @@ function CastSpell()
 end
 
 ");
-
+          
           RAM_function = "CastSpell";
           spellbook.TryGetValue(RAM_function, out RAM_code);
           
