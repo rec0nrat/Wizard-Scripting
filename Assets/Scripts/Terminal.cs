@@ -6,6 +6,8 @@ public class Terminal : MonoBehaviour {
 
      public Text spell_name;
      public Text spell_code;
+     public Canvas terminal_can;
+
 
 	public void Compile()
      {
@@ -20,6 +22,20 @@ public class Terminal : MonoBehaviour {
           {
                spell_name.text = GameManager.instance.player.RAM_function;
                spell_code.text = GameManager.instance.player.RAM_code;
+          }
+
+          if (Input.GetKeyDown(KeyCode.T))
+          {
+               if (terminal_can.enabled)
+               {
+                    terminal_can.enabled = false;
+               }
+               else
+               {
+                    Debug.Log("Open Terminal");
+                    terminal_can.enabled = true;
+
+               }
           }
      }
 }
