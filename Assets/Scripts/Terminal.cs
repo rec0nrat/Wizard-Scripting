@@ -14,11 +14,34 @@ public class Terminal : MonoBehaviour {
      public List<Text> spellslot_txt;
      public Text health_txt;
 
+     public void UpdateSpellButtons()
+     {
+          for (int i = 0; i < 3; i++) {
+               if(GameManager.instance.player.spellbook.Count - 1 < i)
+               {
+                    spellslot_txt[i].text = "Spell " + i;
+               }
+               else if (GameManager.instance.player.spellbook[i].name == "")
+               {
+                    spellslot_txt[i].text = "Spell " + i;
+               }
+               else {
+                    spellslot_txt[i].text = GameManager.instance.player.spellbook[i].name;
+               }
+          }
+     }
+
+     public void SpellButtonClicked()
+     {
+          Debug.Log(gameObject.GetComponent<Text>().text);
+     }
+
 	public void Compile()
      {
-          Debug.Log("compiling code");
+         // Debug.Log("compiling code");
           Spell stemp = new Spell(name_input.text, code_input.text);
           bool isDuplicate = false;
+
           //check if spell already exists
           for(int i = 0; i < GameManager.instance.player.spellbook.Count; i++)
           {
@@ -38,8 +61,10 @@ public class Terminal : MonoBehaviour {
                GameManager.instance.player.RAM_function = stemp.name;
                GameManager.instance.player.RAM_code = stemp.code;
               // GameManager.instance.player.spellnames_current.Add(name_input.text);
-               Debug.Log("Dictionary new::cout = " + GameManager.instance.player.spellbook.Count);
+              // Debug.Log("Dictionary new::cout = " + GameManager.instance.player.spellbook.Count);
           }
+
+          UpdateSpellButtons();
           /*
           if (GameManager.instance.player.spellbook.ContainsKey(name_input.text))
           {
@@ -82,5 +107,6 @@ public class Terminal : MonoBehaviour {
 
                }
           }
+
      }
 }
