@@ -482,12 +482,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1795581140}
+        m_MethodName: SpellButtonPressed
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1530,7 +1530,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1248724109}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1795581140}
+        m_MethodName: SpellButtonPressed
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1248724109
@@ -1666,6 +1677,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player:
     libraries: []
+    spellnames_current:
+    - Fireball
     name: 
     memory_MAX: 0
     memory: 0
@@ -1839,13 +1852,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1795581140}
+        m_MethodName: SpellButtonPressed
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2133,6 +2146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6834f4ce61c400c45a8ba9cc5f43ec5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeSpellText: {fileID: 2123161975}
   spells:
   - {fileID: 1060344540}
   - {fileID: 2031599233}
@@ -2203,7 +2217,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Other Spell
 --- !u!222 &2031599234
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2349,7 +2363,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Other Other Spell
 --- !u!222 &2123458349
 CanvasRenderer:
   m_ObjectHideFlags: 0
