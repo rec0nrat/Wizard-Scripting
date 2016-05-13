@@ -128,4 +128,14 @@ end
          RAM_code = spellbook[0].code;
           
      }
+
+     public void ApplyDamage(int damage)
+     {
+         health -= damage;
+         if (health <= 0)
+         {
+             // TODO(barret): make death screen
+             Debug.Log("player is dead");
+         }
+     }
 }

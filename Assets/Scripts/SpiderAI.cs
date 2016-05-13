@@ -77,6 +77,7 @@ public class SpiderAI : MonoBehaviour
                 {
                     SetState(spider_state.CHASE);
                 }
+
             }break; 
         }
     }
@@ -87,7 +88,9 @@ public class SpiderAI : MonoBehaviour
 
         if (attackTimer >= rateOfAttack)
         {
- 
+            attackTimer = 0;
+
+            GameManager.instance.player.ApplyDamage(damage);
         }
     }
 
