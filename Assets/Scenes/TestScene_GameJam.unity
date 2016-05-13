@@ -290,7 +290,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -328,6 +327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spell_name: {fileID: 511360250}
   spell_code: {fileID: 430966495}
+  terminal_can: {fileID: 238051243}
 --- !u!1 &275510077
 GameObject:
   m_ObjectHideFlags: 0
